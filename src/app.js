@@ -36,7 +36,13 @@ const styles = theme => ({
         fontSize: '3.5rem',
         fontWeight: 'bold',
         // maxWidth:'50%',
-        textAlign: 'right'
+        [theme.breakpoints.down('xs')]: {
+            textAlign: 'center'
+        },
+        [theme.breakpoints.up('sm')]: {
+            textAlign: 'right'
+        }
+        
 
     },
     button: {
@@ -51,7 +57,7 @@ const styles = theme => ({
     },
     input: {
         margin: theme.spacing(2),
-        maxWidth:'100%',
+        width:'75%',
 
     },
     fieldContainer: {
@@ -60,6 +66,7 @@ const styles = theme => ({
         // maxHeight: '100vh',
     },
     drawr : {
+        top:'20vh',
         backgroundColor: 'yellowgreen',
         // width:'150%',
         margin :'auto auto',
